@@ -1,2 +1,11 @@
-article a {color: red;
-}
+a {
+    font-size:20px;
+    color:#100;
+  }
+  li {
+      font-size: 24px;
+      color: salmon;
+  }
+  aside {
+      color: springgreen;
+  }
