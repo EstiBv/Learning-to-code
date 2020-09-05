@@ -40,9 +40,13 @@
   display: block;
 }
 .div3 {
-  display: none;
+  display: inline;
 }
-img {
+img.img1 {
   width: 100px;
   height: 100px;
+}
+img.img2 {
+  width: 200px;
+  height: 200px;
 }
