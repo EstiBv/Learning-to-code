@@ -1,0 +1,11 @@
+.div1 {
+  display: inline;
+  font-size: 100px;
+}
+.div2 {
+  size: 100px;
+  font-display: 100px;
+}
+.div3 {
+  display: inline-block;
+}
