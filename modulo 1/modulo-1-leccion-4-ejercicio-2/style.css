@@ -1,0 +1,22 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: cornflowerblue;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  box-sizing: border-box;
+  border: 10px dashed cornflowerblue;
+  background: coral;
+  width: 200px;
+  height: 100px;
+  font-size: 64px;
+  text-align: center;
+  color: aliceblue;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* display: contents; */
+}
