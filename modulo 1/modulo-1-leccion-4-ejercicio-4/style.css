@@ -22,6 +22,14 @@
   text-align: center;
 } */
 
+.item .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* columna izquierda */
+
 .item .article2 {
   background: #454545;
   display: flex;
@@ -30,6 +38,12 @@
   align-items: flex-start;
   text-align: left;
 }
+.img2 {
+  display: block;
+  margin-right: auto;
+}
+
+/* columna derecha */
 
 .item .article3 {
   background: #5fac58;
@@ -38,4 +52,9 @@
   /* justify-content: right; */
   justify-items: right;
   text-align: right;
+}
+
+.img3 {
+  display: block;
+  margin-left: auto;
 }
