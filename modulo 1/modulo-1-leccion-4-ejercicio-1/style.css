@@ -16,6 +16,7 @@
   border: 1px solid rgb(236, 226, 226);
   background: rgb(92, 46, 46);
   color: aliceblue;
+  text-align: left;
 }
 
 .container2 {
@@ -32,4 +33,5 @@
   font-family: sans-serif;
   font-size: 14px;
   background: rgb(245, 196, 193);
+  text-align: center;
 }
