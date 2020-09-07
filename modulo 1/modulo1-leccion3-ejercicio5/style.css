@@ -1,16 +1,20 @@
+:root {
+  --background-color: red;
+}
 .div1 {
-  background: chocolate;
+  background: var(--background-color);
   padding: 50px;
   display: inline-block;
   color: blue;
   margin: 20px 40px;
 }
 .div2 {
-  background: #662121;
+  background: var(--background-color);
   width: auto;
   display: inline-block;
 }
 .div3 {
-  background: seagreen;
+  background: var(--background-color);
   border: solid 3px black;
+  margin: auto;
 }
