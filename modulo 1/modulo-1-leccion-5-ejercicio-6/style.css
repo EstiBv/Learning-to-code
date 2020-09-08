@@ -1,0 +1,7 @@
+.cookies {
+  height: 100px;
+  background-color: yellow;
+  position: fixed;
+  bottom: 100px;
+  z-index: 100px;
+}
