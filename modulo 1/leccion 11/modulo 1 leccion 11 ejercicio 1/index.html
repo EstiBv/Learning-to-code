@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <h1>Formulario</h1>
+
+    <div class="form">
+      <form action="/signup" method="POST">
+        <label for="firstName"></label>
+        <input
+          placeholder="Nombre"
+          type="text"
+          name="firstName"
+          id="firstName"
+        />
+
+        <label for="lastName"></label>
+        <input
+          placeholder="Apellido"
+          type="text"
+          name="lasttName"
+          id="lastName"
+        />
+
+        <label for="emailadress"></label>
+        <input
+          placeholder="Email"
+          type="mail"
+          name="emailadress"
+          id="emailadress"
+        />
+
+        <label for="street"></label>
+        <input placeholder="Calle" type="text" name="city" id="street" />
+
+        <label for="city"></label>
+        <input placeholder="Ciudad" type="text" name="city" id="city" />
+
+        <label for="province"></label>
+        <input
+          placeholder="Provincia"
+          type="text"
+          name="province"
+          id="province"
+        />
+
+        <label for="country"></label>
+        <input placeholder="País" type="text" name="country" id="country" />
+
+        <label for="DNI"></label>
+        <input placeholder="DNI" type="text" name="DNI" id="DNI" />
+        <label for="telephone"></label>
+        <input
+          placeholder="Teléfono"
+          type="tel"
+          name="telephone"
+          id="telephone"
+        />
+
+        <label type="password"></label>
+        <input
+          placeholder="Contraseña"
+          type="password"
+          name="Contraseña"
+          id="Contraseña"
+        />
+
+        <label type="password"></label>
+        <input
+          placeholder="Confirmar Contraseña"
+          type="password"
+          name="Contraseña"
+          id="Contraseña"
+        />
+
+        <input type="submit" value="enviar" />
+      </form>
+    </div>
+  </body>
+</html>
