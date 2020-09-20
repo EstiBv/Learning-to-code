@@ -3,23 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-.Container {
+
+.item {
   padding: 10px 10px 10px 10px;
-  font-size: 24px;
-  color: wheat;
-  font-size: 32px;
   text-align: center;
   background-color: black;
-}
-.item {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  color: wheat;
-  /* font-size: 32px;
-  text-align: center;
-  background-color: black; */
 }
 
 .Container__item--1 {
