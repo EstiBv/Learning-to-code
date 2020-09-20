@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,105 +7,61 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <h1>Formulario</h1>
+    <section class="Contact">
+      <div class="Contact__title">
+        <h1 class="Contact__title--text">Contacto</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+          maxime reiciendis asperiore.
+        </p>
+        <small class="Contact__title--text"
+          >Todos los campos marcados con * son obligatorios</small
+        >
+      </div>
 
-    <div class="form">
-      <form action="/signup" method="POST">
-        <label for="firstName"></label>
-        <input
-          placeholder="Nombre"
-          type="text"
-          name="firstName"
-          id="firstName"
-          required
-        />
+      <form class="Contact__form" action="/signup" method="POST">
+        <div class="Contact__form--firstName">
+          <label for="firstName">Nombre completo <span>*</span></label>
+          <input
+            placeholder="Nombre..."
+            type="text"
+            name="firstName"
+            id="firstName"
+            required
+          />
+        </div>
+        <div class="Contact__form--emailadress">
+          <label for="emailadress"> Email<span>*</span> </label>
+          <input
+            value="nombre.apellido@mail.com"
+            type="mail"
+            name="emailadress"
+            id="emailadress"
+            required
+          />
+        </div>
+        <div class="Contact__form--telephone">
+          <label for="telephone">Teléfono</label>
+          <input
+            placeholder="Ej:123456789"
+            type="tel"
+            name="telephone"
+            id="telephone"
+          />
+        </div>
+        <div class="Contact__form--textarea">
+          <label for="textarea">Mensaje <span>*</span></label>
+          <textarea
+            placeholder="¿Qué necesitas?"
+            name="mensaje"
+            id="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
 
-        <label for="lastName"></label>
-        <input
-          placeholder="Apellido"
-          type="text"
-          name="lasttName"
-          id="lastName"
-        />
-
-        <label for="emailadress"></label>
-        <input
-          placeholder="Email"
-          type="mail"
-          name="emailadress"
-          id="emailadress"
-          required
-        />
-
-        <label for="street"></label>
-        <input
-          placeholder="Calle"
-          type="text"
-          name="city"
-          id="street"
-          required
-        />
-
-        <label for="city"></label>
-        <input
-          placeholder="Ciudad"
-          type="text"
-          name="city"
-          id="city"
-          required
-        />
-
-        <label for="province"></label>
-        <input
-          placeholder="Provincia"
-          type="text"
-          name="province"
-          id="province"
-          value="Madrid"
-          required
-        />
-
-        <label for="country"></label>
-        <input
-          placeholder="País"
-          type="text"
-          name="country"
-          id="country"
-          value="España"
-          required
-        />
-
-        <label for="DNI"></label>
-        <input placeholder="DNI" type="text" name="DNI" id="DNI" />
-        <label for="telephone"></label>
-        <input
-          placeholder="Teléfono"
-          type="tel"
-          name="telephone"
-          id="telephone"
-          required
-        />
-
-        <label type="password"></label>
-        <input
-          placeholder="Contraseña"
-          type="password"
-          name="Contraseña"
-          id="Contraseña"
-          required
-        />
-
-        <label type="password"></label>
-        <input
-          placeholder="Confirmar Contraseña"
-          type="password"
-          name="Contraseña"
-          id="Contraseña"
-          required
-        />
-
-        <input type="submit" value="enviar" />
+        <input class="Contact__form--button" type="submit" value="enviar" />
       </form>
-    </div>
+    </section>
   </body>
 </html>

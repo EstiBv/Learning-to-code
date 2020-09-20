@@ -1,3 +1,17 @@
-input {
-  display: block;
+/* Marga */
+/* input {  -webkit-appearance: none;  -moz-appearance: none;  appearance: none;}* {  margin: 0;  padding: 0;  box-sizing: border-box;} 
+
+text-align: center;   text-transform: uppercase;   color: #099d8d;   font-family: 'Rubik', sans-serif;   font-size: 24px;   font-weight: 500;   font-stretch: normal;   font-style: normal;   line-height: 1.88;   letter-spacing: normal;   margin-bottom: 15px;
+
+
+width: 100%;   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;   font-size: 16px;   font-weight: normal;   font-stretch: normal;   font-style: normal;   line-height: 1.5;   letter-spacing: normal;   text-align: center;   color: #54585a;   margin-bottom: 15px
+
+font-family: 'Open Sans', 'Helvetica Neue', sans-serif;   font-size: 14px;   font-weight: normal;   font-stretch: normal;   font-style: normal;   line-height: normal;   letter-spacing: normal;   color: #54585a;   display: block;
+
+@media screen and (min-width: 767px) {   .contact {     width: 442px;      margin: auto;   }   .contact-text {     padding-left: 30px;     padding-right: 30px;   }   .submit {     width: 50%;     float: right;   } } 
+
+*/
+
+.Contact {
+  display: flex;
 }
