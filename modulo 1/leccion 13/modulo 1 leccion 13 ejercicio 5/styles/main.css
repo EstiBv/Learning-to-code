@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.body {
+  height: 100vh;
+  background-color: rgb(224, 211, 211);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font
+}
+
+.subtitle {
+  font-size: 28px;
+  color: rgb(241, 111, 111);
+  padding-bottom: 80px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.form {
+  display: block;
+  position: absolute;
+  bottom: 160px;
+  left: 35%;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form__email {
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+  display: block;
+  border-color: white;
+}
+.jump-email {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding-left: 7px;
+  color: rgb(241, 111, 111);
+  display: flex;
+  animation-name: jump-email;
+  animation-duration: 1.5s;
+  animation-delay: 0.1s;
+  position: relative;
+  animation-timing-function: ease;
+}
+@keyframes jump-email {
+  0% {
+    display: none;
+    color: rgb(241, 111, 111);
+    bottom: -50px;
+  }
+  50% {
+    /* color: transparent; */
+    bottom: 10px;
+  }
+  100% {
+    color: rgb(241, 111, 111);
+    bottom: 15px;
+  }
+}
+
+.form__email:hover {
+  background-color: black;
+  text-overflow: clip;
+  color: white;
+  transition: color ease 0.4s;
+}
+
+.form__password {
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  display: block;
+  border-color: white;
+}
+
+
+.send {
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 2px 2px 2px 2px;
+  color: rgb(241, 111, 111;
+  
+}
+
