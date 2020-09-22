@@ -6,7 +6,7 @@
 }
 .body {
   height: 100vh;
-  background-color: rgb(224, 211, 211);
+  background-color: #e0d3d3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,22 +15,21 @@
 
 .title {
   text-transform: uppercase;
-  font
 }
 
 .subtitle {
   font-size: 28px;
-  color: rgb(241, 111, 111);
+  color: #f16f6f;
   padding-bottom: 80px;
   margin-bottom: 20px;
   position: relative;
 }
+
 .form {
   display: block;
   position: absolute;
   bottom: 160px;
   left: 35%;
-  
   font-family: Arial, Helvetica, sans-serif;
 }
 .form__email {
@@ -41,11 +40,12 @@
   display: block;
   border-color: white;
 }
+
 .jump-email {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   padding-left: 7px;
-  color: rgb(241, 111, 111);
+  color: #f16f6f;
   display: flex;
   animation-name: jump-email;
   animation-duration: 1.5s;
@@ -53,10 +53,11 @@
   position: relative;
   animation-timing-function: ease;
 }
+
 @keyframes jump-email {
   0% {
     display: none;
-    color: rgb(241, 111, 111);
+    color: #f16f6f;
     bottom: -50px;
   }
   50% {
@@ -64,7 +65,7 @@
     bottom: 10px;
   }
   100% {
-    color: rgb(241, 111, 111);
+    color: #f16f6f;
     bottom: 15px;
   }
 }
@@ -82,13 +83,13 @@
   display: block;
   border-color: white;
 }
-
-
 .send {
   text-decoration: none;
   margin-top: 10px;
-  padding: 2px 2px 2px 2px;
-  color: rgb(241, 111, 111;
-  
+  padding: 5px 5px 5px 5px;
+  background: #f16f6f;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 12px;
 }
-

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 40px;
+  height: 100vh;
+  position: relative;
+}
+.container:hover .button {
+  transform: translate(10vw, 0);
+}
+
+button {
+  margin-left: 20px;
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  border-radius: 40px;
+  background-color: darkcyan;
+  font-family: sans-serif;
+  color: white;
+  position: absolute;
+  top: 30px;
+  transform: translate(0, 10vh);
+  transition-property: opacity ease 0.2s;
+  transition: transform ease-in 2s;
+
+  /* animation-name: jump; */
+}
+
+/* @keyframes jump {
+  
+} */
