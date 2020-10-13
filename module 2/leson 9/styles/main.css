@@ -1,8 +1,17 @@
+/* Ticket #1: Centrar el careto */
+* {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
 .head {
   background: #fc0;
   height: 100px;
   position: relative;
   width: 100px;
+  /* Ticket #2: Cara redonda */
+  border-radius: 50%;
 }
 .face {
   font-family: "courier new", serif;
@@ -13,3 +22,14 @@
   top: 50%;
   transform: translate(-50%, -60%) rotate(90deg);
 }
+
+/* Ticket #1: Centrar el careto */
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /* margin-top: 25%; */
+}
+
+/* Ticket #3: Cara Sonriente HTLM > :)*/
