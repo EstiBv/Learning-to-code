@@ -1,5 +1,4 @@
 "use strict";
-
 const promos = [
   {
     promo: "A",
@@ -69,15 +68,42 @@ const promos = [
 const studentsWorkingInGoogle = ["id-2", "id-3", "id-5", "id-9"];
 
 // TÚ CÓDIGO AQUÍ
-const addElement = document.querySelector(".js-result");
-let accName = "";
+// let accName = "";
 
-function listAdalabers() {
-  for (let i = 0; i < promos.length; i++) {
-    // console.log(promos[i].name);
-    accName += `<li>${promos[i].name}</li>}`;
+// function listAdalabers() {
+//   for (let i = 0; i < promos.length; i++) {
+//     // console.log(promos[i].name);
+//     accName += `<li>${promos[i].name}</li>}`;
+//   }
+// }
+// addElement.innerHMTL = `<ul>${accName}</ul>`;
+// // console.log(accName);
+// listAdalabers();
+
+// Ejercicio 2
+// const addElement = document.querySelector(".js-result");
+// let accName = " ";
+
+// for (let i = 0; i < promos.length; i++) {
+//   accName += `<li><p>Nombre: ${promos[i].name}</p><p>Promo: ${promos[i].name}</p></li>`;
+// }
+
+// addElement.innerHTML = `<ul>${accName}</ul>`;
+
+// console.log(accName);
+
+// Ejercicio 4
+const listAdalabers = document.querySelector(".js-result");
+let printDataAdalaber = " ";
+
+for (let i = 0; i < promos.length; i++) {
+  printDataAdalaber = `<li>${promos}</li>`;
+  for (let i2 = 0; i2 < promos[i].students.length; i2++) {
+    console.log(`${promos[i].name}`);
   }
 }
-addElement.innerHMTL = `<ul>${accName}</ul>`;
-// console.log(accName);
-listAdalabers();
+// printDataAdalaber = (
+//   <li>
+//     <p></p>
+//   </li>
+// );
