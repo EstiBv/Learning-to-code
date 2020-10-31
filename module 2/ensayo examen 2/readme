@@ -1,0 +1,248 @@
+
+
+// estas 5 lineas es lo que tenía antes, que añadía una clase al cuando escuchaba el click. Pero no está bien
+
+// let serieItem = ev.currentTarget;
+// if ((serieItem = ev.currentTarget)) {
+//   serieItem.classList.add("serieFav");
+//   // eliminar console
+//   console.log("clikedFav");
+// }
+
+// función según donde sucenda el evento click, añadir (clase de fav a la cliked) al array de favoritos!
+
+
+
+
+
+  /* FUNCIÓN LISTEN FAVORITES 
+
+  // convierte los id en números enteros porque estan como strings en los datos del server
+  // const clickedId = parseInt(ev.currentTarget.id);
+  // dataSeriesTvFav = ev.currentTarget.id;
+  // dataSeriesTvFav = clickedId;
+
+   // partimos de una variable falsa, porque de inicio ninguna es favorita, cuando sea favorita será verdadera.
+ // recorremos el array donde se van a meter las favo
+ // push agrega elementos a un array , al final..pero estando vacío creo que se posicionan normal.
+
+ // clickedId.classList.add("serieFav");
+      // se guarda la clase de serieFav en el arrayvacio de series va
+      // .clickedId.setAttribute(id);
+
+  utilizamos una variable para guardar las clicadas que no tiene aún valor, porque va a ser según se clicken(y se va a guardar su posición y su valor, es decir, por ejemplo the office con valor 526 va a ser el 1º, así sucesivamente con otras que clicke),y se me van a guardar en el array de favo. el indice de las favoritas aun no lo sabemos, por eso no la variable indexfav está vacía. Luego, por naturaleza ninguna es favorita, por eso se ponen que de primero es falso que sean favoritas
+    Entonces, recorremos el array de favoritas, que de un incio está vacío pero en esta función le hemos dicho que las que sean clicadas, primero que su valor lo convierta en un número entero porque vienen de un objeto (datos del servidor), y están como string, es decir tienen un valor numérico pero en los datos del servidor vienen como letras, son string, y lo vamos a convertir en números, para que entren en el array. Bien, recorremos el array de favoritas que va a tener los id, los numeros, de las clicadas. Y si las posiciones de este array de favot (el indice que se recorre de favos) son iguales a las posiciones del array donde están estas series, la favorita ahora se convierte el verdadera, porque ha sido encontrada en el array de las series generales y y en el cajón/variable de indice de favoritas, que primero está vacío porque no hay ninguna, se empieza a llenar con las que han sido clicadas, y se tiene su id, y se almacenan en el array de favos. y ya, se detiene el proceso con break. Else, sino ocurre nada de eso con el resto de series del array general presentado en el buscador, no hay ninguna favoritra, es decir, es falso que existan favos.
+    Lo sigiente que hay que hacer es,que el array de las favoritas se impriman en la pantalla (se pueden imprimir en el apartado aside que para esto está, luego ubicarlo donde nos interese con css*/
+
+FUNCIÓN LISTEN FAVORITES
+let clickedId = ev.currentTarget.id;
+  clickedId = parseInt(ev.currentTarget.id);
+  dataSeriesTvFav.push(dataSeriesTv[clickedId]);
+
+    let indexFavorites;
+  // let isFavorite = false;
+  // for (let i = 0; i < dataSeriesTvFav.length; i++) {
+  //   if ((dataSeriesTvFav[i].show = dataSeriesTv[i].show.id)) {
+  //     clickedId.classList.add("serie-fav");
+  //     isFavorite = true;
+  //     indexFavorites = clickedId.push(dataSeriesTvFav);
+  //     break;
+  //   } else {
+  //     isFavorite = false;
+  //   }
+  // }
+  // // dataSeriesTv[clickedId] = dataSeriesTvFav[i];
+  // console.log(clickedId);
+  // console.log(dataSeriesTvFav);
+
+
+
+
+
+  TODO EL CODIGO
+
+  
+
+
+
+COÓDIGO CHAPUZAS DE incio
+"use strict";
+const inputText = document.querySelector(".js-inputText");
+const btnSearch = document.querySelector(".js-btn");
+const results = document.querySelector(".js-searchResults");
+// esta const es para imprimir la lista de favos a la izq. No desaparecer al refrescar la página - localStorage con fav -
+const asideFav = document.querySelector(".js-saveFavorites");
+
+let dataSeriesTv = [];
+// array vacío para meter el listado que devuelve la api
+let dataSeriesTvFav = [];
+// array vacío para meter el listado de series favoritas clickadas
+/*SERIES FAVORITAS dentro de este array, imprimirtar en el aside, el aside con clase:*/
+
+function getDataSeries() {
+  let inputValue = inputText.value;
+  fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then(function (data) {
+      // si pongo show me da error ,con data si los lee, creo que porque no tiene nombre el array del Api
+      dataSeriesTv = data;
+      paintCard();
+      listenSeries();
+      // console.log(dataSeriesTv);
+    });
+}
+
+// función que pinta
+function paintCard() {
+  let showResults = "";
+
+  for (let i = 0; i < dataSeriesTv.length; i++) {
+    // añado clases a todas las series y un id con su orden (ej.4 leson 9)
+    showResults += `<li class = "js-serie" id="${i}">`;
+    showResults += `<p>${dataSeriesTv[i].show.name}</p>`;
+    // el div es para pintar el fondo, añadir clase css
+    showResults += `<div>`;
+    // IMG metido en el if = showResults += `<img src="${dataSeriesTv[i].show.image.medium}" alt="show tv image"/> `;
+    if (dataSeriesTv[i].show.image !== null) {
+      showResults += `<img src="${dataSeriesTv[i].show.image.medium}" alt="show tv image"/> `;
+    } else if (dataSeriesTv[i].show.image === null) {
+      showResults += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?" alt="show tv image"/> `;
+      console.log(dataSeriesTv[i].show);
+    }
+
+    showResults += `</div>`;
+    showResults += "</li>";
+  }
+
+  results.innerHTML = showResults;
+  console.log(showResults);
+  // funcion a llamar a evento: movido a getDataSeries
+}
+
+// función marcar y descamar favoritas
+/* en base a la explicación de Dayana, pero no entiendo bien porqué el indice  -1 es verdadero y marca debugger falso, le he puesto true en el if por eso*/
+// function listSeriesFav(ev) {
+//   const clickedId = parseInt(ev.currentTarget.id);
+//   const indexSeriesFav = dataSeriesTvFav.indexOf(clickedId);
+//   const isFav = indexSeriesFav !== -1;
+//   console.log(clickedId);
+//   if (isFav === true) {
+//     dataSeriesTvFav.push(clickedId);
+//   } else {
+//     dataSeriesTvFav.splice(clickedId);
+//   }
+// }
+
+// función pintar favoritas
+function paintFavorites() {
+  let showFavors = " ";
+  for (let i = 0; i < dataSeriesTvFav.length; i++) {
+    showFavors += `<li class = "js-serie" id =${[i]} >`;
+    showFavors += `<p>${dataSeriesTvFav[i].show.name} <span>x</span></p>`;
+    if (dataSeriesTvFav[i].show.image !== null) {
+      showFavors += `<img src="${dataSeriesTv[i].show.image.medium}" alt="show tv image"/> `;
+    } else if (dataSeriesTvFav[i].show.image === null) {
+      showFavors += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?" alt="show tv image"/> `;
+      console.log(dataSeriesTvFav[i].show);
+      showFavors += "</li>";
+    }
+  }
+  asideFav.innerHTML = showFavors;
+  console.log(dataSeriesTvFav);
+}
+
+//  ESTO ESTABA EN LA FUNCIÓN DE LISTE SSRIES FAV
+// si cliked esta en favo, add list
+// let isclicked;
+
+// compruebo si la serie clicada está en favoritos ya y dar instruccion para que no se añada al array de favos
+// let foundSerieFav;
+// for (const serie of dataSeriesTvFav) {
+//   if (dataSeriesTvFav === clickedId) {
+//     foundSerieFav == serie;
+//     serie.splice(dataSeriesTvFav, clickedId);
+//     // no incrementar :(
+//   }
+// }
+// // si no está en el array de favos
+// if (foundSerieFav === undefined) {
+//   let foundSerie;
+//   for (const serie of dataSeriesTv) {
+//     if (serie === clickedId) {
+//       foundSerie = serie;
+//     }
+//   }
+// }
+
+// // función eliminar favoritos
+// function buttonClose(ev) {
+//   let buttonRemove = document.querySelectorAll(".btn-Fav");
+//   let buttonCliked;
+//   for (const buttonRemove of buttonsRemove) {
+//     buttonRemove.currentTarget;
+//   }
+//   if (buttonRemove === ev) {
+//     buttonCliked = dataSeriesTvFav.splice(0, ev);
+//   }
+//   console.log("me quieren cerrar");
+//   buttonRemove.addEventListener("click", listSeriesFav);
+// }
+
+function listenSeriesFav(ev) {
+  // let clickClassFav = classList.add("serieFav");
+  let clickedId = ev.currentTarget;
+  clickedId.classList.add("serieFav");
+  clickedId = parseInt(ev.currentTarget.id);
+  dataSeriesTvFav.push(dataSeriesTv[clickedId]);
+  console.log(dataSeriesTvFav);
+
+  // dataSeriesTvFav = clickedId;
+  // let indexFavorites;
+  // let isFavorite = false;
+  // // indexFavorites = dataSeriesTvFav.push(dataSeriesTv[clickedId]);
+
+  // for (let i = 0; i < dataSeriesTvFav.length; i++) {
+  //   if (dataSeriesTvFav[i] === clickedId) {
+  //     isFavorite = true;
+  //     indexFavorites = favoritesLis.indexOf(clickedId);
+  //     break;
+  //   } else {
+  //     isFavorite = false;
+  //   }
+  //   // dataSeriesTv[clickedItem] = dataSeriesTvFav[i];
+  // }
+  paintFavorites();
+  console.log(ev.currentTarget.id);
+  console.log(dataSeriesTv);
+  console.log(clickedId);
+  console.log(dataSeriesTvFav);
+}
+// dataSeriesTv[clciked]id. en favo no guardar id, sino un objeto, favo.push=(resul.[click]) guarda elemen pus // hacer push, todod lo que clcuqe el favo,
+//   arrayfavorites.push( array total [clickid])
+
+//  Este evento creo que se invoca aquí // const seriesId = serieItem.getAttribute(id);
+// }
+
+// Funcion escuchar = escuchar todas (array con todas.clase js-serie), si tienen interaccion de la usuaria, y meterlas en al array de favs.
+// Función de escuchar a todas (array y listen click) evento lo tiene la superior
+function listenSeries() {
+  const seriesItems = document.querySelectorAll(".js-serie");
+  for (const serieItem of seriesItems) {
+    serieItem.addEventListener("click", listenSeriesFav);
+  }
+  console.log(seriesItems);
+}
+// función listen del click
+const search = function (ev) {
+  ev.currentTarget;
+  getDataSeries();
+  console.log("click");
+  // aqui hay que llamar a getDataSeries que busca los datos
+};
+
+btnSearch.addEventListener("click", search);
+
+// borrar antes de subir
+btnSearch.click();

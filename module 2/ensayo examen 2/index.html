@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo-2-evaluacion-final-EstiBv</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- title -->
+    <header role="banner" class="container__title">
+      <h1>Tv Series <span class="finder">Finder</span></h1>
+    </header>
+    <main role="main" class="container">
+      <!-- search -->
+      <form method="GET" role="form" class="container-form">
+        <label for="text"></label>
+        <input
+          class="inputText js-inputText"
+          type="text"
+          id="text"
+          placeholder="Enter your search"
+          aria-label="input-search"
+          required
+        />
+        <input
+          type="button"
+          id="button"
+          value="Search"
+          aria-label="button-search"
+          class="btn js-btn"
+        />
+      </form>
+      <!-- results -->
+      <section class="container-results">
+        <article class="container-results__finder">
+          <h2>Results</h2>
+          <ul class="container-results__list js-searchResults"></ul>
+        </article>
+        <!-- favorites section -->
+        <aside role="complementary" class="container-favorites">
+          <h3>My favorites</h3>
+          <ul class="container-favorites__save js-saveFavorites"></ul>
+        </aside>
+      </section>
+    </main>
+    <!-- script -->
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>
