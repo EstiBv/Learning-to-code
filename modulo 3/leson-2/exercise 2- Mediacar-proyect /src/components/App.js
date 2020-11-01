@@ -1,5 +1,5 @@
-import FernandoS from "./images/FernandoS.jpg";
-import "./styles/App.css";
+import FernandoS from "../images/FernandoS.jpg";
+import "../styles/App.css";
 
 function app() {
   const appNameHeader = (

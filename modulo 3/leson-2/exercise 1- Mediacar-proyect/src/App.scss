@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.Card {
+  padding: 30px 30px 30px 30px;
+  background-color: #eaecec;
+  width: auto;
+  height: 100vh;
+  &____front {
+    background-color: #feffff;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 10px #b9b8b8;
+  }
+  &__small {
+    margin-top: 40px;
+  }
+  &____header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__simon {
+    padding-right: 5px;
+    width: 75px;
+    border-radius: 100px;
+    align-self: start;
+  }
+  &__title {
+    font-size: 30px;
+  }
+  &__article {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+  &__small {
+    display: inline-block;
+    color: #c6c9c9;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__likes {
+    color: #000000;
+  }
+}

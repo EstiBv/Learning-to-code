@@ -1,12 +1,12 @@
 import FernandoS from "./FernandoS.jpg";
-import "./App.css";
+import "./App.scss";
 
 function render() {
   return (
     <div className="Card">
       <section className="Card__front">
         <header className="Card__header">
-          <img src={FernandoS} className="Card-simon" alt="author" />
+          <img src={FernandoS} className="Card__simon" alt="author" />
           <h1 className="Card__title">Fernando Simón</h1>
           <p className="Card__date">Lunes 2 de Noviembre de 2020</p>
         </header>
