@@ -24,7 +24,19 @@ class Square extends Poligono {
     this.heigth = side;
   }
 }
+class Triangle extends Poligono {
+  constructor(base, heigth) {
+    super(3, base, heigth);
+  }
+  area() {
+    return super.area() / 2;
+  }
+}
 
-const result = new Square(7);
+const result = new Square(4);
 console.log(result.perimeter());
 console.log(result.area());
+
+const result2 = new Triangle(4, 3);
+console.log(result2.perimeter());
+console.log(result2.area());
