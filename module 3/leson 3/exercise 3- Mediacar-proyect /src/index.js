@@ -1,19 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+// import App from "./components/App";
 import PaintCard from "./components/PaintCard";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <PaintCard />
   </React.StrictMode>,
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+/* al llamar a app me da error line 1, aunque se pinta. Si quito paintCard y line 5, no error pero no se pinta ¿? */
