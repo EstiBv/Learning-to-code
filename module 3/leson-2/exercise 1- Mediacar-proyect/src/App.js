@@ -1,12 +1,8 @@
+import React from "react";
 import FernandoS from "./FernandoS.jpg";
 import "./App.css";
-import React from "react";
 
-class render extends React.Component {
-  constructor(props) {
-    super();
-  }
-
+class App extends React.Component {
   render() {
     return (
       <div className="Card">
@@ -36,4 +32,4 @@ class render extends React.Component {
   }
 }
 
-export default render;
+export default App;

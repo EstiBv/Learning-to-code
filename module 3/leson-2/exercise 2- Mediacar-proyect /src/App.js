@@ -3,12 +3,8 @@ import "./styles/App.css";
 import React from "react";
 
 class app extends React.Component {
-  constructor(props) {
-    super();
-  }
-
   render() {
-    const appNameHeader = (
+    const NameHeader = (
       <header className="Card__header">
         <img src={FernandoS} className="Card__simon" alt="author" />
         <section className="Card__title">
@@ -35,7 +31,7 @@ class app extends React.Component {
 
     const containerPage = (
       <div className="Card__front">
-        {appNameHeader}
+        {NameHeader}
         {appNameMain}
       </div>
     );
