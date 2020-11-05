@@ -1,12 +1,12 @@
-import PaintCard from "./components/PaintCard";
+import MediaCard from "./components/MediaCard";
 
-class app extends PaintCard {
+class app extends MediaCard {
   constructor(props) {
     super();
   }
 
   render() {
-    return PaintCard;
+    return MediaCard;
   }
 }
 
