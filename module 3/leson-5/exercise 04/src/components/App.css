@@ -1,3 +1,7 @@
-.paint {
-  background-color: brown;
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0px 10px 0px 10px;
 }

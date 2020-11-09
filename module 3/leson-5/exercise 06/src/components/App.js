@@ -1,15 +1,23 @@
 import "../components/App.css";
-import OnionHater from "./OnionHater";
 import React from "react";
-import Destiny from "./Destiny";
+import TextInput from "./TextInput";
+import MIMITranslator from "./MIMITranslator";
 
-function App() {
+// guarda los cambios que recibe en un atributo y fuerza el repintado de su nieta >>lifting
+function Header() {
+  const handleText = (data) => {
+    data.replace("aáeéoóuú", "i");
+    console.log("hola de la abuela", data);
+  };
+  const miMi = (data) => {
+    data.replace("aáeéoóuú", "i");
+  };
   return (
     <div className="App">
-      <OnionHater />
-      {/* <Destiny /> */}
+      <TextInput handleTextProp={handleText} />
+      <MIMITranslator value={miMi} />
     </div>
   );
 }
 
-export default App;
+export default Header;
