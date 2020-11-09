@@ -1,10 +1,11 @@
 import "./App.css";
-import Array from "./components/Array";
+
+import ItemList from "./components/ItemList";
 
 function App() {
   return (
     <div>
-      <Array />
+      <ItemList />
     </div>
   );
 }

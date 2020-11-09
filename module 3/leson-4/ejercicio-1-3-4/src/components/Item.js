@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 class Item extends React.Component {
   render() {
     return (
@@ -14,4 +16,17 @@ class Item extends React.Component {
     );
   }
 }
+Item.defaultProps = {
+  quantity: "0",
+  name: "Producto",
+  description: "mesaorvidaoladescripsióm",
+  category: "Comida",
+  price: "0",
+};
+
+Item.propTypes = {
+  quantity: PropTypes.number.isRequired,
+  name: PropTypes.string,
+};
+
 export default Item;
