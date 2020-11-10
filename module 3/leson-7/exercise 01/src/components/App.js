@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../components/App.scss";
+import Older from "./Older";
 
-function App(params) {
+const App = () => {
+  const [age, setYears] = useState(20);
+  let i = 20;
+  const generateAge = () => i++;
+
+  const getYear = () => {
+    setYears(generateAge());
+  };
+
   return (
-    <div className="App">
-      <p>Hoy tengo 20 años de edad</p>
-      <input type="button" />
+    <div>
+      <Older getYears={getYear} years={age} />
     </div>
   );
-}
-// eslint-disable-next-line no-useless-constructor
+};
 
 export default App;
