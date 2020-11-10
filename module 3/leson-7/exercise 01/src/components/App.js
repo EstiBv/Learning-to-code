@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../components/App.scss";
 import Older from "./Older";
 
+let i = 30;
 const App = () => {
-  const [age, setYears] = useState(20);
-  let i = 20;
+  const [age, setYears] = useState(30);
   const generateAge = () => i++;
 
   const getYear = () => {
