@@ -1,19 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      copyText: "",
-    };
-    this.handleText = this.handleText.bind(this);
-  }
-
-  handleText(ev) {
-    this.setState({
-      copyText: ev.target.value,
-    });
   }
 
   render() {
