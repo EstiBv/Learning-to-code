@@ -7,4 +7,4 @@ const peopleFetch = () => {
   );
 };
 
-export { peopleFetch };
+export default peopleFetch;

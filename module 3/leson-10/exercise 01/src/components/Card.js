@@ -6,10 +6,15 @@ class Card extends React.Component {
   render() {
     return (
       <li>
-        <h2>Nombre</h2>
+        <form action="">
+          <label htmlFor="text">Búsqueda por nombre</label>
+          <input type="text" />
+          <label htmlFor="text">Búsqueda por localización</label>
+          <input type="text" />
+          <label htmlFor="text">Búsqueda por edad</label>
+          <input type="text" />
+        </form>
         <img src="" alt="" />
-        <p>Location</p>
-        <p>Age</p>
       </li>
     );
   }

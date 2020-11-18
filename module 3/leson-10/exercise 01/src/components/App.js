@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/App.scss";
-import { peopleFetch } from "../services/ReasonsService";
+import fetch from "../services/ReasonsService";
 // import PropTypes from "prop-types";
 import CardList from "./CardLIst";
 
@@ -8,10 +8,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // listStatus : "loading"
       data: "",
       filter: [],
     };
-    this.fetchDataPeople = this.fetchDataPeople.bind(this);
+    // this.fetchDataPeople = this.fetchDataPeople.bind(this);
   }
 
   // handleFilterChange(a) {
@@ -20,17 +21,17 @@ class App extends React.Component {
   //   });
   // }
 
-  fetchDataPeople() {
-    fetch("https://randomuser.me/api/?results=50")
-      .then((response) => response.json())
-      .then((dataInfo) => {
-        this.setState({
-          data: dataInfo,
-        });
-        console.log("hola");
-        console.log(this.state.data);
-      });
-  }
+  // fetchDataPeople() {
+  //   fetch("https://randomuser.me/api/?results=50")
+  //     .then((response) => response.json())
+  //     .then((dataInfo) => {
+  //       this.setState({
+  //         data: dataInfo,
+  //       });
+  //       console.log("hola");
+  //       console.log(this.state.data);
+  //     });
+  // }
   render() {
     return (
       <React.Fragment>
@@ -42,7 +43,7 @@ class App extends React.Component {
             <CardList data={this.state.data} />
           </ul>
         </div>
-        {/* <Filter/> */}
+        {/* <Filter/> {this.state.listStatus !=="loading" ?} */}
       </React.Fragment>
     );
   }
