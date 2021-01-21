@@ -1,0 +1,10 @@
+.main {
+  background-color: hsl(351, 77%, 86%);
+}
+
+.main__title {
+  color: hsl(351, 57%, 48%);
+}
+.highlightText {
+  color: hsl(177, 57%, 48%);
+}
