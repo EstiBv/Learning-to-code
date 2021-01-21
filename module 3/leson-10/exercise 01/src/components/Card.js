@@ -5,7 +5,7 @@ import React from "react";
 class Card extends React.Component {
   render() {
     return (
-      <li>
+      <li className="list__container">
         <form action="">
           <label htmlFor="text">Búsqueda por nombre</label>
           <input type="text" />

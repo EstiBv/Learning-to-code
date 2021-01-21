@@ -3,3 +3,12 @@
   height: 20px;
   background-color: rgb(108, 138, 138);
 }
+.list__container {
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}

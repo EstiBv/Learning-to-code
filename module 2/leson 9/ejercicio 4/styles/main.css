@@ -1,3 +1,10 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .lineCheck {
   text-decoration: line-through;
+}
+.list {
+  list-style: none;
 }
