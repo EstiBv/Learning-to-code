@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.success {
+  border: 2px solid #40916c;
+  background-color: #b7e4c7;
+  color: #05442a;
+}
+
+.warning {
+  border: 2px solid #fae588;
+  background-color: #fdf8e1;
+  color: #b38206;
+}
+
+.error {
+  border: 2px solid #bf211e;
+  background-color: #ef8275;
+  color: #3a0101;
+}
