@@ -12,7 +12,7 @@ _Ejercicios de iniciación_
 
 #### ` 📚 Contenido`
 
-1️⃣ ¿Qué es? ¿Para qué? ¿Cuádo?
+1️⃣ ¿Qué es? ¿Para qué? ¿Cuándo?
 
 2️⃣ Booleanos
 
