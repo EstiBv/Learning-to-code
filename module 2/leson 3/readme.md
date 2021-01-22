@@ -13,8 +13,11 @@ _Ejercicios de iniciación_
 #### ` 📚 Contenido`
 
 1️⃣ ¿Qué es? ¿Para qué? ¿Cuádo?
+
 2️⃣ Booleanos
+
 3️⃣ Truthy & Falsy
+
 4️⃣ Operadores de comparación
 
 - Igualdad / Desigualdad
