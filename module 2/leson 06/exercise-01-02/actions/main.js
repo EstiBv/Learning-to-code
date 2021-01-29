@@ -17,7 +17,7 @@ function adalabers() {
     job: "actriz",
   };
   // métodos del objeto 2
-  adalaber2.run = (km) => `Estoy corriendo.`;
+  adalaber2.run = () => `Estoy corriendo`;
   adalaber2.runAMarathon = (distance) => `una maratón de ${distance} km.`;
   paragrah.innerHTML = `Mi nombre es ${adalaber2.name}, tengo ${
     adalaber2.age
