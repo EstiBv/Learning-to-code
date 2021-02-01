@@ -2,19 +2,20 @@
 
 const btn = document.querySelector(".js-btn");
 function infoPressButton() {
-  /* 1- Se ejecute al pulsar el botón
-  /* 2-.value recoge el valor del input, y esta acción la recoge ésta segunda constante. Ese valor tiene que estár en la url por eso se añade */
+  /* 1- Se ejecuta al pulsar el botón
+  /* 2-.value recoge el valor del input, y esta acción la recoge ésta segunda constante. Ese valor tiene que estar en la url por eso se añade */
   const inputUserValue = document.querySelector(".js-input").value;
 
-  /* 3- Contiente un apetición a la API para obtener info de ese usuario */
+  /* 3- Contiente una petición a la API para obtener info de ese usuario */
 
   fetch(`https://api.github.com/users/${inputUserValue}`)
     .then((response) => response.json())
     .then((data) => {
-      /* esto es una lista y puedo meterlo en un array, para recorrerlo, y alañadir datos a las clases del html */
+      /* esto es una lista y puedo meterlo en un array, para recorrerlo, y añadir datos a las clases del html */
+
       // const listDataUser = document.querySelectorAll("js-list");
       // for (let i = 0; i < listDataUser.length; i++) {
-      //   console.log("jola");
+      //   console.log("hola lista");
       // }
 
       const dateName = document.querySelector(".name");
@@ -35,8 +36,3 @@ function infoPressButton() {
 }
 
 btn.addEventListener("click", infoPressButton);
-
-// pintar
-// userGitHub () => {
-
-// }
