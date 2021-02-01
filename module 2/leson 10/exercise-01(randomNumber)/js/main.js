@@ -1,4 +1,5 @@
 "use strict";
+
 // Ejercicio 1. Petición a servidor
 function getNumber() {
   fetch("https://api.rand.fun/text/password?length=10")

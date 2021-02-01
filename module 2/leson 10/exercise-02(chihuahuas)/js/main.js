@@ -14,7 +14,4 @@ const btn = document.querySelector(".js-dog");
 btn.innerHTML = "Enséñame otro Chihuahua";
 btn.addEventListener("click", getDogImage);
 
-
-
-
-https://api.empresa.com/v1/perretes?name=chihuahua&limit=10&order=name
+// https://api.empresa.com/v1/perretes?name=chihuahua&limit=10&order=name
