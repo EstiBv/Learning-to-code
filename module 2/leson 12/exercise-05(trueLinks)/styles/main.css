@@ -1,0 +1,45 @@
+* {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.menuItems {
+  background-color: rgb(247, 165, 58);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.item {
+  list-style-type: none;
+}
+
+.item1,
+.item2,
+.item3 {
+  text-decoration: none;
+  color: rgb(11, 17, 15);
+  font-weight: bold;
+}
+
+.main {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.article {
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
