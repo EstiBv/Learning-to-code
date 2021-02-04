@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Chalkboard";
+  color: white;
+}
+
+body {
+  padding: 20px 20pc 20px 20px;
+  background-color: darkslategrey;
+}
+.js-boxListPunish {
+  list-style: none;
+}
