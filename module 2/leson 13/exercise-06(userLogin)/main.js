@@ -7,3 +7,10 @@ const users = [
   { name: "Rocío", isPremium: false, pin: 5232 },
   { name: "Inmaculada", isPremium: false, pin: 8998 },
 ];
+
+const checkUsersPremium = () =>
+  users
+    .filter((user) => user.pin % 2 === 0)
+    .map((user) => ` ${user.name} puede acceder`);
+
+console.log(checkUsersPremium());

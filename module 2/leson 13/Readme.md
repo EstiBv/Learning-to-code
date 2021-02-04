@@ -20,7 +20,7 @@ _Ejercicios_
 - Filter
 - Reduce
 - Éstos métodos encadenados
-- Find y FindIndex
+- Find y FindIndex | splice
 
 🆓 Bonus
 
