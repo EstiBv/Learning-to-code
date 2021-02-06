@@ -16,13 +16,18 @@ function getCharacters() {
     .then((response) => response.json())
     .then((data) => {
       let results = data.results;
+      /*
+      Con map() se pintan en cadena en el <li>, no es listado uno a uno por eso aplico un for
+
+      let name = results.map((data) => data.name).sort();
+      let gender = results.map((data) => data.gender).sort();
+      */
 
       for (let i = 0; i < results.length; i++) {
-        let resultName = results[i].name;
-        let resultGender = results[i].gender;
-        let listResults = `<li> Personaje: ${resultName}<br>  Género: ${resultGender} </li>`;
+        let name = results[i].name;
+        let gender = results[i].gender;
+        let listResults = `<li> ${name}<br>  Género: ${gender} </li>`;
         paintList.innerHTML += listResults;
-        console.log(listResults, resultName, resultGender);
       }
     });
 }
