@@ -1,37 +1,80 @@
 "use strict";
 
 const btn = document.querySelector(".js-button");
-const paintList = document.querySelector(".js-list");
-const inputText = document.querySelector(".js-input");
+const list = document.querySelector(".js-list");
+// array initial search
+const characterInfo = [];
+// search offline
+let savedSearch = [];
+let search = "";
+let results = "";
+// data indicator, start as false
+let marker = false;
 
-const searchResult = [];
-if (!localStorage.getItem("searchResult")) {
-  for (let i = 1; i < 10; i++) {
-    fetch(`https://swapi.dev/api/people/?page=${i}`)
-      .then((response) => response.json())
-      .then((data) => {
-        searchResult.push(data.results);
-        localStorage.setItem("searchResult", searchResult);
-      });
+function handler() {
+  marker = false;
+  search = document.querySelector(".js-input").value.toLowerCase();
+  if (search !== "") {
+    const askLocalStorage = getLocalStorage();
+    if (!askLocalStorage) {
+      getInfo();
+    } else {
+      getInfoFromLocal();
+    }
   }
-} else {
-  localStorage.getItem("searchResult");
 }
 
-function getCharacters(ev) {
-  // empty list
-  paintList.innerHTML = "";
-
-  // get input text value
-  const inputTextSearch = inputText.value;
-  console.log(inputTextSearch);
-  // request
-
-  // for (let i = 0; i < searchResult.length; i++) {
-  //   let name = searchResult[i].name;
-  //   let gender = searchResult[i].gender;
-  //   let listResults = `<li> ${name}<br>  Género: ${gender} </li>`;
-  //   paintList.innerHTML += listResults;
-  // }
+function getInfo() {
+  fetch(`https://swapi.dev/api/people/?search=${search}`)
+    .then((response) => response.json())
+    .then((data) => {
+      results = data.results;
+      paintData();
+    });
 }
-btn.addEventListener("click", getCharacters);
+
+function paintData() {
+  list.innerHTML = "";
+  for (let j = 0; j < results.length; j++) {
+    let liElement = `<li>Name: <span class="ligthText">${results[j].name}</span> Gender: <span class="ligthText">${results[j].gender}</span></li>`;
+    list.innerHTML += liElement;
+    const characterObject = {
+      name: results[j].name,
+      gender: results[j].gender,
+    };
+    characterInfo.push(characterObject);
+  }
+  const stringData = JSON.stringify(characterInfo);
+  localStorage.setItem("search", stringData);
+}
+
+function getLocalStorage() {
+  const stringInfo = localStorage.getItem("search");
+  savedSearch = JSON.parse(stringInfo);
+  if (savedSearch !== null) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function getInfoFromLocal() {
+  for (let i = 0; i < savedSearch.length; i++) {
+    let character = savedSearch[i].name.toLowerCase();
+    console.log(character);
+    console.log(search);
+    console.log(character.includes(search));
+    if (character.includes(search)) {
+      marker = true;
+      list.innerHTML = "";
+      console.log("entiendo la orden");
+      let liElement = `<li>Name: <span class="ligthText">${savedSearch[i].name}</span> Gender: <span class="ligthText">${savedSearch[i].gender}</span></li>`;
+      list.innerHTML += liElement;
+    }
+  }
+  if (!marker) {
+    getInfo();
+  }
+}
+
+btn.addEventListener("click", handler);
